@@ -1,0 +1,15 @@
+<template>
+  <section class="au-animate">
+    <h2>${heading}</h2>
+    <div>
+      <div class="col m2">
+        <span repeat.for="row of router.navigation">
+          <a class="waves-effect waves-light btn ${row.isActive ? 'disabled' : ''}" href.bind="row.href">${row.title}</a>
+        </span>
+      </div>
+      <div class="col m10" style="padding: 0">
+        <router-view></router-view>
+      </div>
+    </div>
+  </section>
+</template>

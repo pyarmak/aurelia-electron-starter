@@ -1,0 +1,26 @@
+<template>
+  <nav role="navigation">
+    <div class="nav-wrapper container">
+      <a class="brand-logo" href="#">
+        <i class="mdi-action-home left"></i>
+        ${router.title}
+      </a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+      <ul class="right hide-on-med-and-down">
+        <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
+          <a href.bind="row.href">${row.title}</a>
+        </li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
+          <a href.bind="row.href">${row.title}</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <script>
+    $(document).ready(function () {
+      $(".button-collapse").sideNav();
+    });
+  </script>
+</template>

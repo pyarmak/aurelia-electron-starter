@@ -1,0 +1,12 @@
+<template>
+  <section>
+      <h2>${heading}</h2>
+      <div class="row au-stagger">
+        <div class="col s6 m3 flickr-img au-animate" repeat.for="image of images">
+          <a class="thumbnail">
+            <img src.bind="image.media.m"/>
+          </a>
+        </div>
+      </div>
+  </section>
+</template>
