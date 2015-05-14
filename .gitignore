@@ -4,5 +4,4 @@ bower_components
 .idea
 .DS_STORE
 /dist
-cache
-release
+electron
