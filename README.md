@@ -41,25 +41,36 @@ To run the app, follow these steps.
   npm install -g jspm
   ```
   > **Note:** jspm queries GitHub to install semver packages, but GitHub has a rate limit on anonymous API requests. It is advised that you configure jspm with your GitHub credentials in order to avoid problems. You can do this by executing `jspm registry config github` and following the prompts.
-5. Install the client-side dependencies with jspm:
+
+5. Ensure jspm-bower-endpoint is configured
+
+  ```shell
+  npm install -g jspm-bower-endpoint
+  ```
+  
+  ```shell
+  jspm registry create bower jspm-bower-endpoint
+  ```
+  
+6. Install the client-side dependencies with jspm:
 
   ```shell
   jspm install -y
   ```
   >**Note:** Windows users, if you experience an error of "unknown command unzip" you can solve this problem by doing `npm install -g unzip` and then re-running `jspm install`.
-6. To run the app, execute the following command:
+7. To run the app, execute the following command:
 
   ```shell
   gulp watch
   ```
-7. Browse to [http://localhost:9000](http://localhost:9000) to see the app. You can make changes in the code found under `src` and the browser should auto-refresh itself as you save files.
+8. Browse to [http://localhost:9000](http://localhost:9000) to see the app. You can make changes in the code found under `src` and the browser should auto-refresh itself as you save files.
 
-8. To run electron execute:
+9. To run electron execute:
 
   ```shell
   gulp electron
   ```
-9. To create an electron distribution execute:
+10. To create an electron distribution execute:
 
   ```shell
   gulp electron:release
