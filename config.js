@@ -5,7 +5,6 @@ System.config({
     "github:*": "jspm_packages/github/*.js",
     "npm:*": "jspm_packages/npm/*.js",
     "aurelia-skeleton-navigation/*": "dist/app/*.js",
-    "bower:*": "jspm_packages/bower/*.js"
   }
 });
 
@@ -28,9 +27,9 @@ System.config({
     "materialize": "github:dogfalo/materialize@0.96.1",
     "traceur": "github:jmcriffey/bower-traceur@0.0.88",
     "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.88",
-    "bower:materialize@0.96.1": {
+    "github:dogfalo/materialize@0.96.1": {
       "css": "github:systemjs/plugin-css@0.1.10",
-      "jquery": "bower:jquery@2.1.4"
+      "jquery": "github:components/jquery@2.1.4"
     },
     "github:aurelia/animator-css@0.2.0": {
       "aurelia-templating": "github:aurelia/templating@0.11.2"
